@@ -12,15 +12,7 @@ const pagareRoutes = require('./src/routes/pagare.routes');
 const pagoRoutes = require('./src/routes/pago.routes');
 const reporteRoutes = require('./src/routes/reporte.routes');
 const dashboardRoutes = require('./src/routes/dashboard.routes');
-const admin = require('firebase-admin');
-
-const serviceAccount = JSON.parse(process.env.FIREBASE_KEY);
-
-serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
+const admin = require('./src/config/firebase.js');
 const app = express();
 
 
@@ -59,5 +51,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Servidor corriendo en puerto ${PORT}`);
 });
-
 
