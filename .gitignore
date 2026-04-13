@@ -1,0 +1,11 @@
+node_modules/
+
+src/config/firebase.js
+src/config/firebase-service-account.json
+.firebase/
+src/pdfs
+.cache
+.env
+LISTADO_MORA_CLIENTES.txt
+
+
