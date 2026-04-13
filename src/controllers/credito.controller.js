@@ -71,7 +71,7 @@ const guardarCredito = async (req, res) => {
 
     const totalInteres = total_capital * tasa_fija * plazo_meses;
     const totalGarantia = total_capital * 0.10;
-    const total_seguro = seguro ? 80 : 0;
+    const total_seguro = seguro ? 90 : 0;
     const totalAPagar = total_capital + totalInteres;
 
     const pago_semanal = totalAPagar / Number(no_pagos);
