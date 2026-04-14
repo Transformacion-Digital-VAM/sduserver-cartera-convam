@@ -187,6 +187,8 @@ const generarPagare = async (req, res) => {
     const domicilio = `${data.calle} ${data.numero}, ${data.localidad}`;
     const aval = `${data.nombre_aval} ${data.app_aval} ${data.apm_aval}`;
     const domicilioAval = `${data.calle_aval} ${data.numero_aval}, ${data.localidad_aval}`;
+    const municipio = data.municipio;
+    const municipioAval = data.municipio_aval;
     const montoLetras = NumerosALetras(monto, {
       plural: 'pesos',
       singular: 'peso',
@@ -346,11 +348,11 @@ const generarPagare = async (req, res) => {
       </p>
       <p>
         El (los) suscriptores y sus(s) avalista(s), se someten expresamente para el caso de controversia judicial, a la competencia de
-        los tribunales de la ciudad de DOLORES HIDALGO, GTO.
+        los tribunales de la ciudad de SAN DIEGO DE LA UNIÓN, GTO.
       </p>
       La cantidad antes señalada será pagada en <b>${data.no_pagos} amortizaciones ${data.tipo_vencimiento.toUpperCase()}ES</b>, y consecutivas, precisamente en las fechas
       establecidas en el calendario de amortizaciones.
-      En la ciudad de DOLORES HIDALGO, GTO el <b>${new Date().toLocaleDateString("es-MX")}</b>
+      En la ciudad de SAN DIEGO DE LA UNIÓN, GTO el <b>${new Date().toLocaleDateString("es-MX")}</b>
       <h3 style="text-align:center;">CALENDARIO DE AMORTIZACIÓN</h3>
 
       <table border="0" width="100%" cellspacing="0" cellpadding="5" style="font-size: 11px;">
@@ -388,7 +390,7 @@ const generarPagare = async (req, res) => {
           Como aval conozco y estoy de acuerdo con las responsabilidades credicticias que adquiero al momento de la firma
           de este pagare, me comprometo a responder ante la institución en caso de que el acreditado presente
           atrasos en los pagos de acuerdo a la fecha asignada.
-          En la Ciudad de DOLORES HIDALGO, GTO el ${new Date().toLocaleDateString("es-MX")}</p>
+          En la Ciudad de SAN DIEGO DE LA UNIÓN, GTO el ${new Date().toLocaleDateString("es-MX")}</p>
           <table style="font-size: 11px; width: 100%; align-content: center">
             <tr>
               <th style="text-align: center">"EL ACREDITADO"</th>
@@ -408,8 +410,8 @@ const generarPagare = async (req, res) => {
               <td><b>Domicilio:</b> ${domicilioAval}</td>
             </tr>
             <tr>
-              <td><b>Población:</b> DOLORES HIDALGO, GTO</td>
-              <td><b>Población:</b> DOLORES HIDALGO, GTO</td>
+              <td><b>Población:</b> ${municipio}, GTO</td>
+              <td><b>Población:</b> ${municipioAval}, GTO</td>
             </tr>
         </table>
       </body>
