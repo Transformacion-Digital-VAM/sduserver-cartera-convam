@@ -5,7 +5,6 @@ src/config/firebase-service-account.json
 .firebase/
 src/pdfs
 .cache
-.env
 LISTADO_MORA_CLIENTES.txt
 
 
