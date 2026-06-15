@@ -348,7 +348,7 @@ const generarPagare = async (req, res) => {
       </p>
       <p>
         El (los) suscriptores y sus(s) avalista(s), se someten expresamente para el caso de controversia judicial, a la competencia de
-        los tribunales de la ciudad de SAN DIEGO DE LA UNIÓN, GTO.
+        los tribunales de la ciudad de DOLORES HIDALGO, GTO.
       </p>
       La cantidad antes señalada será pagada en <b>${data.no_pagos} amortizaciones ${data.tipo_vencimiento.toUpperCase()}ES</b>, y consecutivas, precisamente en las fechas
       establecidas en el calendario de amortizaciones.
